@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>For My BIVI 💍</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Poppins:wght@300;400&display=swap" rel="stylesheet">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+
+html,body{
+  height:100%;
+  font-family:'Poppins',sans-serif;
+  overflow:hidden;
+}
+
+.swiper{
+  height:100vh;
+  overflow-y:scroll;
+  scroll-snap-type:y mandatory;
+  -webkit-overflow-scrolling:touch;
+}
+
+section{
+  height:100vh;
+  scroll-snap-align:start;
+  padding:42px 26px;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+  position:relative;
+}
+
+/* dreamy overlay */
+section::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  backdrop-filter:blur(1.5px);
+  z-index:0;
+}
+section > *{position:relative;z-index:1}
+
+h1,h2{
+  font-family:'Playfair Display',serif;
+  color:#7a1020;
+}
+
+p{
+  font-size:1.08rem;
+  line-height:1.9;
+  color:#5a1a22;
+  max-width:560px;
+}
+
+/* backgrounds */
+.bg1{background:linear-gradient(135deg,#ffe0ec,#fff4f8)}
+.bg2{background:linear-gradient(135deg,#fff0f5,#ffdbe6)}
+.bg3{background:linear-gradient(135deg,#ffe6ef,#fff8fb)}
+.bg4{background:linear-gradient(135deg,#fff5f7,#ffd6dc)}
+.bg5{background:linear-gradient(135deg,#ffdbe6,#fff1f4)}
+
+/* glow */
+.glow{animation:glow 2s infinite alternate}
+@keyframes glow{
+  from{transform:scale(1)}
+  to{transform:scale(1.05)}
+}
+
+/* floating hearts */
+.heart{
+  position:fixed;
+  bottom:-20px;
+  font-size:18px;
+  animation:float 7s linear infinite;
+  pointer-events:none;
+}
+@keyframes float{
+  to{
+    transform:translateY(-120vh) translateX(30px);
+    opacity:0;
+  }
+}
+
+/* buttons */
+.btn{
+  margin-top:26px;
+  padding:14px 36px;
+  border-radius:40px;
+  border:none;
+  background:#c9184a;
+  color:white;
+  font-size:1.05rem;
+}
+
+/* music overlay */
+#musicOverlay{
+  position:fixed;
+  inset:0;
+  background:rgba(255,235,245,.96);
+  z-index:999;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+}
+#musicOverlay button{
+  margin-top:18px;
+  padding:14px 30px;
+  border:none;
+  border-radius:30px;
+  background:#c9184a;
+  color:white;
+}
+</style>
+</head>
+
+<body>
+
+<audio id="bgMusic" loop>
+  <source src="music.mp3" type="audio/mpeg">
+</audio>
+
+<div id="musicOverlay">
+  <h2>For my BIVI 💖</h2>
+  <p>Tap once… this is something special 💍</p>
+  <button onclick="startMusic()">Start</button>
+</div>
+
+<div class="swiper">
+
+<!-- PAGE 1 -->
+<section class="bg1 glow">
+  <h1>Happy Propose Day 💍</h1>
+  <p>For my BIVI…<br>this comes straight from my heart.</p>
+</section>
+
+<!-- PAGE 2 -->
+<section class="bg2">
+  <h2>Not a Question Yet</h2>
+  <p>
+    Before I ask you anything,  
+    I want you to know how deeply  
+    you matter to me.
+  </p>
+</section>
+
+<!-- PAGE 3 -->
+<section class="bg3">
+  <h2>For My BIVI 🤍</h2>
+  <p>
+    You didn’t just enter my life,  
+    you slowly became my favorite part of it.
+  </p>
+</section>
+
+<!-- PAGE 4 -->
+<section class="bg4">
+  <h2>The Little Things</h2>
+  <p>
+    Your smile.  
+    Your voice.  
+    The way you feel like home.
+  </p>
+</section>
+
+<!-- PAGE 5 -->
+<section class="bg5">
+  <h2>If I’m Honest…</h2>
+  <p>
+    I don’t want perfect days.  
+    I want real days —  
+    with you.
+  </p>
+</section>
+
+<!-- PAGE 6 -->
+<section class="bg2">
+  <h2>A Promise</h2>
+  <p>
+    To stand by you.  
+    To choose you.  
+    Even on the hard days.
+  </p>
+</section>
+
+<!-- PAGE 7 -->
+<section class="bg3">
+  <h2>So Today…</h2>
+  <p>
+    I’m not rushing.  
+    I’m just asking from my heart.
+  </p>
+</section>
+
+<!-- PAGE 8 -->
+<section class="bg4">
+  <h2>Will You… 💍</h2>
+  <button class="btn" onclick="propose()">Say Yes 💖</button>
+</section>
+
+<!-- PAGE 9 -->
+<section class="bg5">
+  <h2>For My BIVI</h2>
+  <p>
+    Whatever your answer,  
+    know this —  
+    you are deeply loved.
+  </p>
+</section>
+
+<!-- PAGE 10 -->
+<section class="bg1 glow">
+  <h1>💖 Always You 💖</h1>
+  <p>Happy Propose Day, my BIVI.</p>
+</section>
+
+<!-- PAGE 11 : HINDI QUOTE -->
+<section class="bg2">
+  <h2>एक बात कहूँ…</h2>
+  <p>
+    “तुम्हारे साथ होना  
+    किसी वादे जैसा नहीं,  
+    एक सुकून जैसा लगता है।”
+  </p>
+</section>
+
+<!-- PAGE 12 : HINDI QUOTE -->
+<section class="bg3">
+  <h2>मेरी पसंद 🤍</h2>
+  <p>
+    “हर कहानी खूबसूरत हो  
+    ज़रूरी नहीं,  
+    बस तुम्हारे साथ हो —  
+    इतना काफ़ी है।”
+  </p>
+</section>
+
+</div>
+
+<script>
+function startMusic(){
+  document.getElementById("bgMusic").play().then(()=>{
+    document.getElementById("musicOverlay").style.display="none";
+  });
+}
+
+// floating hearts
+setInterval(()=>{
+  const h=document.createElement("div");
+  h.className="heart";
+  h.innerText="💗";
+  h.style.left=Math.random()*100+"vw";
+  document.body.appendChild(h);
+  setTimeout(()=>h.remove(),7000);
+},800);
+
+// proposal button
+function propose(){
+  alert("💍 She smiled… and my heart knew the answer 💖");
+}
+
+// Easter egg
+let taps=0;
+document.body.addEventListener("click",()=>{
+  taps++;
+  if(taps===30){
+    alert("🤍 I choose you, always, BIVI 🤍");
+  }
+});
+</script>
+
+</body>
+</html>
